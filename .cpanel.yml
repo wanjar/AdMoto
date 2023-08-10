@@ -1,0 +1,9 @@
+##### THIS ALLOWS US TO DEPLOY THE SITE FROM A GIT REPO ######
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home3/hlcppfmy/public_html/AdMoto
+    - /bin/cp -R dist $DEPLOYPATH
+    - /bin/cp -R scss $DEPLOYPATH
+  
+  
