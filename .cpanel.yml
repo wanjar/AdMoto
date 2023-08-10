@@ -5,5 +5,3 @@ deployment:
     - export DEPLOYPATH=/home3/hlcppfmy/public_html/AdMoto
     - /bin/cp -R dist $DEPLOYPATH
     - /bin/cp -R scss $DEPLOYPATH
-  
-  
