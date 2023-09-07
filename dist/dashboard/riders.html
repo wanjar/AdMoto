@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Meta -->
+    <meta name="description" content="">
+    <meta name="author" content="Advert Eyez Limited">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <title>Advert Eyez - Client Dashboard</title>
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="../lib/remixicon/fonts/remixicon.css">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+  </head>
+  <body class="page-sign d-block py-0">
+
+    <div class="row g-0">
+      <div class="col-md-7 col-lg-5 col-xl-4 col-wrapper">
+        <div class="card card-sign">
+          <div class="card-header">
+            <img src="../assets/img/logo.png" style="width: 40%; height: auto;"/><br /><br />
+            <a href="../" class="header-logo mb-5">Client Dashboard</a>
+            <h3 class="card-title">Sign In</h3>
+            <p class="card-text">Please sign in to continue.</p>
+          </div><!-- card-header -->
+          <div class="card-body">
+            <div class="mb-4">
+              <label class="form-label">Email address</label>
+              <input type="text" class="form-control" placeholder="Enter your email address">
+            </div>
+            <div class="mb-4">
+              <label class="form-label d-flex justify-content-between">Password <a href="">Forgot password?</a></label>
+              <input type="password" class="form-control" placeholder="Enter your password">
+            </div>
+            <button class="btn btn-primary btn-sign"><a href="dashboard.html" style="color:white;">Sign In</a></button>
+
+            <div class="divider"><span>Don't have an account?</span></div>
+
+            
+          </div><!-- card-body -->
+          <div class="card-footer">
+            <a href="sign-up.html">Create one here.</a>
+          </div><!-- card-footer -->
+        </div><!-- card -->
+      </div><!-- col -->
+      <div class="col d-none d-lg-block"><img src="../assets/img/bg1.jpg" class="auth-img" alt=""></div>
+    </div><!-- row -->
+
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      'use script'
+
+      var skinMode = localStorage.getItem('skin-mode');
+      if(skinMode) {
+        $('html').attr('data-skin', 'dark');
+      }
+    </script>
+  </body>
+</html>
