@@ -130,75 +130,45 @@
       <div class="calendar-sidebar">
         <div id="calSidebar" class="sidebar-body">
           <div class="d-grid mb-3">
-            <a id="btnCreateEvent" href="" class="btn btn-primary">Create New Event</a>
+            <a id="btnCreateEvent" href="" class="btn btn-primary">Upload Photos</a>
           </div>
         </div><!-- sidebar-body -->
       </div><!-- calendar-sidebar -->
-      <div id="calendar" class="calendar-body"></div>
+      <div id="calendar" class="calendar-body d-none"></div>
+      
     </div><!-- main -->
 
+
+    <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+
+
+
+    
     <div class="modal modal-event fade" id="modalCreateEvent" tabindex="-1" aria-labelledby="modalLabelCreateEvent" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="modalLabelCreateEvent">Create New Event</h5>
+            <h5 class="modal-title" id="modalLabelCreateEvent">Upload Photos</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div><!-- modal-header -->
           <div class="modal-body">
             <div class="mb-3">
-              <label class="form-label">Event Title:</label>
-              <input type="text" class="form-control" placeholder="Enter title of event">
+              <label class="form-label">Photo 1</label>
+              <input type="file" name="photo" id="input-file-now" >
             </div>
+            <br/>
             <div class="mb-3">
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="etype" id="etype1" value="1" checked>
-                <label class="form-check-label" for="etype1">Event</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="etype" id="etype2" value="2">
-                <label class="form-check-label" for="etype2">Reminder</label>
-              </div>
+              <label class="form-label">Photo 2</label>
+              <input type="file" name="photo" id="input-file-now" >
             </div>
-            <div class="row g-3 mb-3">
-              <div class="col-7 col-md-8">
-                <label class="form-label">Start Date:</label>
-                <input id="startDate" type="text" class="form-control" placeholder="Choose date">
-              </div><!-- col -->
-              <div class="col">
-                <label class="form-label">Start Time:</label>
-                <select class="form-select">
-                  <option value="">Choose time</option>
-                  <option value="12:00AM">12:00AM</option>
-                  <option value="12:15AM">12:15AM</option>
-                  <option value="12:30AM">12:30AM</option>
-                  <option value="12:45AM">12:45AM</option>
-                </select>
-              </div><!-- col -->
-            </div><!-- row -->
-            <div class="row g-3 mb-3">
-              <div class="col-7 col-md-8">
-                <label class="form-label">End Date:</label>
-                <input id="endDate" type="text" class="form-control" placeholder="Choose date">
-              </div><!-- col -->
-              <div class="col">
-                <label class="form-label">End Time:</label>
-                <select class="form-select">
-                  <option value="">Choose time</option>
-                  <option value="12:00AM">12:00AM</option>
-                  <option value="12:15AM">12:15AM</option>
-                  <option value="12:30AM">12:30AM</option>
-                  <option value="12:45AM">12:45AM</option>
-                </select>
-              </div><!-- col -->
-            </div><!-- row -->
-            <div>
-              <label class="form-label">Description</label>
-              <textarea class="form-control" rows="3" placeholder="Write some description (optional)"></textarea>
-            </div>
+            
           </div><!-- modal-body -->
           <div class="modal-footer">
             <button type="button" class="btn btn-white" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Add Event</button>
+            <button type="button" class="btn btn-primary">Upload Photos</button>
           </div><!-- modal-footer -->
         </div><!-- modal-content -->
       </div><!-- modal-dialog -->
