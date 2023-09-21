@@ -122,7 +122,7 @@
         </div><!-- dropdown-menu -->
       </div><!-- dropdown -->
       <div class="dropdown dropdown-profile ms-3 ms-xl-4">
-          <a href="" class="dropdown-link" data-bs-toggle="dropdown" data-bs-auto-close="outside"><div class="avatar online"><img src="../assets/img/img1.jpg" alt=""></div></a>
+          <a href="" class="dropdown-link" data-bs-toggle="dropdown" data-bs-auto-close="outside"><div class="avatar online"><img src="../assets/img/Bilkis.JPG" alt=""></div></a>
           <div class="dropdown-menu dropdown-menu-end mt-10-f">
             <div class="dropdown-menu-body">
               <div class="avatar avatar-xl online mb-3"><img src="../assets/img/Bilkis.JPG" alt=""></div>
@@ -150,9 +150,9 @@
         <div>
           <ol class="breadcrumb fs-sm mb-1">
             <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Campaign Analytics</li>
+            <li class="breadcrumb-item active" aria-current="page">Admin Dashboard Home</li>
           </ol>
-          <h4 class="main-title mb-0">Welcome to Dashboard</h4>
+          <h4 class="main-title mb-0"></h4>
         </div>
         <nav class="nav nav-icon nav-icon-lg">
           <a href="" class="nav-link" data-bs-toggle="tooltip" title="Share"><i class="ri-share-line"></i></a>
@@ -160,7 +160,23 @@
           <a href="" class="nav-link" data-bs-toggle="tooltip" title="Report"><i class="ri-bar-chart-2-line"></i></a>
         </nav>
       </div>
-
+      
+      <div class="col-md-12 col-xl-12">
+        <div class="card card-one">
+          <div class="card-header">
+            <h6 class="card-title">Rider Location</h6>
+            <nav class="nav nav-icon nav-icon-sm ms-auto">
+              <a href="" class="nav-link"><i class="ri-refresh-line"></i></a>
+              <a href="" class="nav-link"><i class="ri-more-2-fill"></i></a>
+            </nav>
+          </div><!-- card-header -->
+          <div class="card-body">
+            <div id="map" class="col-md-12 col-xl-12">
+              </div>
+          </div><!-- card-body -->
+        </div><!-- card-one -->
+      </div>
+            
       <div class="row g-3 justify-content-center">
         <div class="col-md-6 col-xl-4">
           <div class="card card-one">
@@ -377,6 +393,9 @@
         <span>&copy; 2023. Advert Eyez Limited. All Rights Reserved.</span>
       </div><!-- main-footer -->
     </div><!-- main -->
+
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+      ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "beta"});</script>
 
 
     <script src="../lib/jquery/jquery.min.js"></script>
