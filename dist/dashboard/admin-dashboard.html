@@ -25,6 +25,10 @@
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjLE-VUjYNcyD7IeWXmXs4Im_NHqwTQXc&callback=myMap"></script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjLE-VUjYNcyD7IeWXmXs4Im_NHqwTQXc&libraries=visualization&callback=initMap">
+</script>
+<script type="module" src="./index.js"></script>
   </head>
   <body>
 
@@ -51,7 +55,7 @@
             <img src="../assets/img/Bilkis.JPG" alt="">
           </div><!-- sidebar-footer-thumb -->
           <div class="sidebar-footer-body">
-            <h6><a href="#">Bilkis Osman</a></h6>
+            <h6><a href="#">Aanchal Dabral</a></h6>
             <p>Account Manager </p>
           </div><!-- sidebar-footer-body -->
           <a id="sidebarFooterMenu" href="" class="dropdown-link"><i class="ri-arrow-down-s-line"></i></a>
@@ -129,7 +133,7 @@
           <div class="dropdown-menu dropdown-menu-end mt-10-f">
             <div class="dropdown-menu-body">
               <div class="avatar avatar-xl online mb-3"><img src="../assets/img/Bilkis.JPG" alt=""></div>
-              <h5 class="mb-1 text-dark fw-semibold">Bilkis Osman</h5>
+              <h5 class="mb-1 text-dark fw-semibold">Aanchal Dabral</h5>
               <p class="fs-sm text-secondary">Account Manager</p>
 
               <nav class="nav">
@@ -229,6 +233,31 @@
             </div><!-- card-body -->
           </div><!-- card-one -->
         </div><!-- col -->
+        <!--Heat Map -->
+        <div class="col-md-8 col-xl-9">
+          <div id="floating-panel">
+            <button id="toggle-heatmap">Toggle Heatmap</button>
+            <button id="change-gradient">Change gradient</button>
+            <button id="change-radius">Change radius</button>
+            <button id="change-opacity">Change opacity</button>
+          </div>
+          <div id="map"></div>
+      
+          <!-- 
+            The `defer` attribute causes the callback to execute after the full HTML
+            document has been parsed. For non-blocking uses, avoiding race conditions,
+            and consistent behavior across browsers, consider loading using Promises.
+            See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+            for more information.
+            -->
+          <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjLE-VUjYNcyD7IeWXmXs4Im_NHqwTQXc&callback=initMap&libraries=visualization&v=weekly"
+            defer
+          ></script>
+        </div>
+        <div class="col-md-4 col-xl-3">
+
+        </div><!-- End of Heat Map-->
         <div class="col-md-7 col-xl-8">
           <div class="card card-one">
             <div class="card-header">
