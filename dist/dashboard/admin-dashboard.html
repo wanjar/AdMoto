@@ -22,7 +22,6 @@
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="../assets/css/style.min.css">
-    <link rel="stylesheet" href="../assets/css/maps.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script type="module" src="./index.js"></script>
   </head>
@@ -164,6 +163,8 @@
         </nav>
       </div>
       
+
+      <div class="row g-3 justify-content-center">
       <div class="col-md-12 col-xl-12">
         <div class="card card-one">
           <div class="card-header">
@@ -174,10 +175,9 @@
             </nav>
           </div><!-- card-header -->
           <div class="card-body">
-            <div id="map" class="col-md-12 col-xl-12">
-              </div>
           </div><!-- card-body -->
         </div><!-- card-one -->
+      </div>
       </div>
             
       <div class="row g-3 justify-content-center">
@@ -230,7 +230,7 @@
           </div><!-- card-one -->
         </div><!-- col -->
         <!--Heat Map -->
-        <div class="col-md-8 col-xl-9">
+        <div class="col-md-12 col-xl-12" style="height: 400px;">
           <div id="floating-panel">
             <button id="toggle-heatmap">Toggle Heatmap</button>
             <button id="change-gradient">Change gradient</button>
@@ -238,12 +238,12 @@
             <button id="change-opacity">Change opacity</button>
           </div>
           <div id="map"></div>
-          
-        </div>
-        <div class="col-md-4 col-xl-3">
-
+          <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjLE-VUjYNcyD7IeWXmXs4Im_NHqwTQXc&callback=initMap&libraries=visualization&v=weekly"
+    defer
+  ></script>
         </div><!-- End of Heat Map-->
-        <div class="col-md-7 col-xl-8">
+        <div class="col-md-7 col-xl-8" style="margin-top: 450px;">
           <div class="card card-one">
             <div class="card-header">
               <h6 class="card-title">Riders</h6>
@@ -257,7 +257,7 @@
             </div><!-- card-body -->
           </div><!-- card-one -->
         </div><!-- col -->
-        <div class="col-md-5 col-xl-4">
+        <div class="col-md-5 col-xl-4" style="margin-top: 450px;">
           <div class="card card-one">
             <div class="card-header">
               <h6 class="card-title">Region Breakdown</h6>
@@ -410,10 +410,7 @@
         <span>&copy; 2023. Advert Eyez Limited. All Rights Reserved.</span>
       </div><!-- main-footer -->
     </div><!-- main -->
-    <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjLE-VUjYNcyD7IeWXmXs4Im_NHqwTQXc&callback=initMap&libraries=visualization&v=weekly"
-    defer
-  ></script>
+    
 
     <script src="/dist/assets/js/app.js"></script>
 
