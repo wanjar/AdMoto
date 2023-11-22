@@ -22,13 +22,9 @@
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="../assets/css/style.min.css">
-
+    <link rel="stylesheet" href="../assets/css/maps.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjLE-VUjYNcyD7IeWXmXs4Im_NHqwTQXc&callback=myMap"></script>
-    <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjLE-VUjYNcyD7IeWXmXs4Im_NHqwTQXc&libraries=visualization&callback=initMap">
-</script>
-<script type="module" src="./index.js"></script>
+    <script type="module" src="./index.js"></script>
   </head>
   <body>
 
@@ -242,18 +238,7 @@
             <button id="change-opacity">Change opacity</button>
           </div>
           <div id="map"></div>
-      
-          <!-- 
-            The `defer` attribute causes the callback to execute after the full HTML
-            document has been parsed. For non-blocking uses, avoiding race conditions,
-            and consistent behavior across browsers, consider loading using Promises.
-            See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
-            for more information.
-            -->
-          <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjLE-VUjYNcyD7IeWXmXs4Im_NHqwTQXc&callback=initMap&libraries=visualization&v=weekly"
-            defer
-          ></script>
+          
         </div>
         <div class="col-md-4 col-xl-3">
 
@@ -425,8 +410,11 @@
         <span>&copy; 2023. Advert Eyez Limited. All Rights Reserved.</span>
       </div><!-- main-footer -->
     </div><!-- main -->
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjLE-VUjYNcyD7IeWXmXs4Im_NHqwTQXc&callback=initMap&libraries=visualization&v=weekly"
+    defer
+  ></script>
 
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjLE-VUjYNcyD7IeWXmXs4Im_NHqwTQXc&callback=initMap"> </script>
     <script src="/dist/assets/js/app.js"></script>
 
     <script src="../lib/jquery/jquery.min.js"></script>
