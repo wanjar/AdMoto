@@ -19,7 +19,7 @@
                 top: 10px;
                 left: 89%;
                 z-index: 99;
-                background-color: #ccffcc;
+                background-color: #ffffff;
                 padding: 10px;
             }
         </style>
@@ -30,7 +30,7 @@
 
         <div id="over_map">
             <div>
-                <span>Online Cars: </span><span id="cars">0</span>
+                <span>Riders Online: </span><span id="cars">0</span>
             </div>
         </div>
 
@@ -43,11 +43,11 @@
             // Replace your Configuration here..
             var config = {
                 apiKey: "AIzaSyCjLE-VUjYNcyD7IeWXmXs4Im_NHqwTQXc",
-                authDomain: "realtime-on-map-example.firebaseapp.com",
-                databaseURL: "https://realtime-on-map-example.firebaseio.com",
-                projectId: "realtime-on-map-example",
+                authDomain: "adridez.firebaseapp.com",
+                databaseURL: "https://adridez.firebaseio.com",
+                projectId: "adridez",
                 storageBucket: "",
-                messagingSenderId: "851837622908"
+                messagingSenderId: "897851575661"
             };
             firebase.initializeApp(config);
         </script>
@@ -62,24 +62,31 @@
             var map;
             function initMap() { // Google Map Initialization... 
                 map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 16,
-                    center: new google.maps.LatLng(31.52011, 74.368604),
-                    mapTypeId: 'terrain'
-                });
+                    zoom: 7,
+                    center: new google.maps.LatLng(0.0, 37.817223),
+                 //mapTypeId: "roadmap",
+    MapID: "82dcc3d9aa244199",
+    styles: [{"featureType":"all","elementType":"geometry.fill","stylers":[{"weight":"2.00"}]},{"featureType":"all","elementType":"geometry.stroke","stylers":[{"color":"#9c9c9c"}]},{"featureType":"all","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#eeeeee"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#7b7b7b"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#c8d7d4"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#070707"}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]}],
+  });
             }
 
             // This Function will create a car icon with angle and add/display that marker on the map
             function AddCar(data) {
 
-                var icon = { // car icon
-                    path: 'M29.395,0H17.636c-3.117,0-5.643,3.467-5.643,6.584v34.804c0,3.116,2.526,5.644,5.643,5.644h11.759   c3.116,0,5.644-2.527,5.644-5.644V6.584C35.037,3.467,32.511,0,29.395,0z M34.05,14.188v11.665l-2.729,0.351v-4.806L34.05,14.188z    M32.618,10.773c-1.016,3.9-2.219,8.51-2.219,8.51H16.631l-2.222-8.51C14.41,10.773,23.293,7.755,32.618,10.773z M15.741,21.713   v4.492l-2.73-0.349V14.502L15.741,21.713z M13.011,37.938V27.579l2.73,0.343v8.196L13.011,37.938z M14.568,40.882l2.218-3.336   h13.771l2.219,3.336H14.568z M31.321,35.805v-7.872l2.729-0.355v10.048L31.321,35.805',
-                    scale: 0.4,
-                    fillColor: "#427af4", //<-- Car Color, you can change it 
-                    fillOpacity: 1,
-                    strokeWeight: 1,
-                    anchor: new google.maps.Point(0, 5),
-                    rotation: data.val().angle //<-- Car angle
-                };
+                var icon = '/dist/assets/img/delivery-bike.png';
+
+         
+
+                //var icon = { // car icon
+                    //ImageBitmap: '/dist/assets/img/motorbike-bike-svgrepo-com.svg',
+                    //path: 'M29.395,0H17.636c-3.117,0-5.643,3.467-5.643,6.584v34.804c0,3.116,2.526,5.644,5.643,5.644h11.759   c3.116,0,5.644-2.527,5.644-5.644V6.584C35.037,3.467,32.511,0,29.395,0z M34.05,14.188v11.665l-2.729,0.351v-4.806L34.05,14.188z    M32.618,10.773c-1.016,3.9-2.219,8.51-2.219,8.51H16.631l-2.222-8.51C14.41,10.773,23.293,7.755,32.618,10.773z M15.741,21.713   v4.492l-2.73-0.349V14.502L15.741,21.713z M13.011,37.938V27.579l2.73,0.343v8.196L13.011,37.938z M14.568,40.882l2.218-3.336   h13.771l2.219,3.336H14.568z M31.321,35.805v-7.872l2.729-0.355v10.048L31.321,35.805',
+                    //scale: 0.4,
+                    //fillColor: "#427af4", //<-- Car Color, you can change it 
+                    //fillOpacity: 1
+                    //strokeWeight: 1,
+                    //anchor: new google.maps.Point(0, 37),
+                    //rotation: data.val().angle //<-- Car angle
+                //};
 
                 var uluru = { lat: data.val().lat, lng: data.val().lng };
 
@@ -116,7 +123,7 @@
             });
 
         </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7DtKqWoAtgKFmYtUu-PceyA7bV1Y9NTU&callback=initMap">
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjLE-VUjYNcyD7IeWXmXs4Im_NHqwTQXc&callback=initMap">
         </script>
 
     </body>
